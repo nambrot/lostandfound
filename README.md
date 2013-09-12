@@ -5,6 +5,7 @@
 - User System with Devise
 - Basic Style with Foundation
 - Responsive with OffCanvasMenu
+- Mobile View Paths
 
 ### Init
 
