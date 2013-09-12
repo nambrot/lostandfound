@@ -1,0 +1,154 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ 
+ *= require foundation_and_overrides
+ *= require_self
+ */
+
+@import "bourbon";
+@import "_globals.css.scss";
+@import "foundation_and_overrides";
+
+// Global stuff
+#global-nav-mobile {
+  @media (min-width: $mobile-width) {
+    display: none;
+  }
+  height: 40px;
+  line-height: 40px;
+  background-color: #56089E;
+
+  a {
+    color: white;
+    line-height: 40px;
+    padding: 0px 10px;
+
+  }
+}
+
+#global-nav {
+  overflow: scroll;
+  background-color: #56089E;
+  color: rgb(120, 199, 236);
+
+  background: url(<%= image_path 'IMG_4771.jpg' %>) 100% 100% no-repeat;
+  padding-top: 5%;
+  text-align: center;
+  position:fixed;
+  height: 100%;
+  width: 300px;
+  background-size: cover;
+
+  nav {
+    text-align: left;
+
+    a {
+      color: white;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    li {
+      padding: 5px 20px;
+    }
+  }
+  h2 a {
+    color: white;
+  }
+
+  h2, h5 {
+    font-family: HelveticaNeue-Light;
+    font-weight: 200;
+    margin-bottom: 0px;
+    color: white;
+    // color: rgb(120, 199, 236);
+  }
+
+  h5 {
+    text-align: left;
+    font-size: 0.9em;
+    padding: 0px 12px;
+  }
+
+  nav ul {
+    background: rgba(0,0,0,0.6);
+  }
+  header {
+    background: rgba(0,0,0,0.6);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+  }
+
+  @media (max-width: $mobile-width) {
+    display : block;
+    left    : -300px;
+    margin  : 0;
+    overflow: hidden;
+    position: absolute;
+    top     : 0;
+    width   : 300px;
+    max-height: 1000px;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height:100%;
+}
+
+body {
+  @include clearfix;
+    background: #ffffff; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #f4f4f4 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffffff), color-stop(100%,#f4f4f4)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#f4f4f4 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  #ffffff 0%,#f4f4f4 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  #ffffff 0%,#f4f4f4 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  #ffffff 0%,#f4f4f4 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#container {
+  @include clearfix;
+  // perspective: 10;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  @media (min-width: $mobile-width) {
+    padding-left: 330px;
+  }
+  
+  width: 100%;
+
+  height: auto !important; /* ie6 ignores !important, so this will be overridden below */
+  min-height: 100%; /* ie6 ignores min-height completely */
+  height: 100%;
+    
+
+  max-width: 100%;
+}
+
+.google-card {
+  color: #525252;
+  background-color: white;
+  padding: 2% 5% 2% 5%;
+  margin: 2%;
+  &.no_padding {
+    padding: 0;
+  }
+  border: 1px solid #d8d8d8;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #fff;
+  border-bottom-width: 2px;
+}
