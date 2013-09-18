@@ -16,3 +16,11 @@ rails g devise:install
 rails g devise User
 rake db:migrate
 ````
+
+### Caveats
+
+- When cloning, reset the Rails secret in config/initializers/secret_token.rb
+
+````
+rake secret
+````
