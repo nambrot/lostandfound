@@ -28,15 +28,14 @@
     </aside>
     <aside id='global-nav'>
       <header>
-        <h2><%= link_to 'Where yo at?' , '/'  %></h2>
-        <h5>Tell yo friends where yo at</h5>
+        <h2><%= link_to 'Lost and Found' , '/'  %></h2>
+        <h5>Make Returning easier than Stealing</h5>
       </header>
       <nav>
         <ul>
           <li><%= link_to 'Home' , '/'  %></li>
           <% if current_user %>
             <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
-            <li><%= link_to "Check In", new_checkin_path  %></li>
           <% else %>
             <li><%= link_to "Sign in", new_user_session_path  %></li>
             <li><%= link_to "Sign Up", new_user_registration_path  %></li>
